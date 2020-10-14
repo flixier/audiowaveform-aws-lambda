@@ -10,5 +10,5 @@ RUN yum -y install make wget tar gcc gcc-c++ file diffutils \
 WORKDIR /audiowaveform
 
 COPY ./build.sh ./build.sh
-
+RUN chmod +x ./build.sh
 CMD ["./build.sh"]
