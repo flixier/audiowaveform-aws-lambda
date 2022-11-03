@@ -8,7 +8,7 @@ wget https://netix.dl.sourceforge.net/project/mad/libid3tag/0.15.1b/libid3tag-0.
 tar xzf libid3tag-0.15.1b.tar.gz
 cd libid3tag-0.15.1b
 sed -i 's/ -fforce-mem//' configure
-./configure --disable-shared --prefix=/usr --libdir=/usr/lib64
+./configure --disable-shared --prefix=/usr --libdir=/usr/lib64  --build=aarch64-unknown-linux-gnu
 make install
 
 # Build libmad
@@ -17,7 +17,7 @@ wget https://netix.dl.sourceforge.net/project/mad/libmad/0.15.1b/libmad-0.15.1b.
 tar xzf libmad-0.15.1b.tar.gz
 cd libmad-0.15.1b
 sed -i 's/ -fforce-mem//' configure
-./configure --disable-shared --prefix=/usr --libdir=/usr/lib64
+./configure --disable-shared --prefix=/usr --libdir=/usr/lib64 --build=aarch64-unknown-linux-gnu
 make install
 
 # Build libogg
